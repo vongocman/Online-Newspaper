@@ -2,7 +2,6 @@ const express = require('express')
 const morgan = require('morgan')
 const exphbs = require('express-handlebars')
 const app = express();
-//app.use(express.static(__dirname+'/public'));
 app.use(morgan('dev'))
 const port = 3000
 
@@ -25,6 +24,6 @@ app.use('/categories', require('./controllers/category.route'));
 
 
 app.listen(port,function () {
-    console.log('start')
+    console.log(`EC Web App listening at http://localhost:${port}`);
     
 });
